@@ -72,8 +72,8 @@ namespace QuanLyBanHang
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.cboMaHD = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDBanHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -168,6 +168,7 @@ namespace QuanLyBanHang
             this.btnInHoaDon.TabIndex = 68;
             this.btnInHoaDon.Text = "In Hóa Đơn";
             this.btnInHoaDon.UseVisualStyleBackColor = true;
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // btnLuu
             // 
@@ -190,6 +191,7 @@ namespace QuanLyBanHang
             this.btnXoa.TabIndex = 66;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -546,15 +548,6 @@ namespace QuanLyBanHang
             this.label16.TabIndex = 88;
             this.label16.Text = "Mã Hóa Đơn:";
             // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(186, 791);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(194, 30);
-            this.txtTimKiem.TabIndex = 89;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -564,15 +557,26 @@ namespace QuanLyBanHang
             this.btnTimKiem.TabIndex = 90;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // cboMaHD
+            // 
+            this.cboMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMaHD.FormattingEnabled = true;
+            this.cboMaHD.Location = new System.Drawing.Point(188, 786);
+            this.cboMaHD.Name = "cboMaHD";
+            this.cboMaHD.Size = new System.Drawing.Size(216, 33);
+            this.cboMaHD.TabIndex = 99;
+            this.cboMaHD.DropDown += new System.EventHandler(this.cboMaHD_DropDown);
             // 
             // ChiTietHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 833);
+            this.Controls.Add(this.cboMaHD);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -629,7 +633,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.ComboBox cboMaKH;
         private System.Windows.Forms.ComboBox cboMaNV;
@@ -638,5 +641,6 @@ namespace QuanLyBanHang
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblBangChu;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox cboMaHD;
     }
 }
